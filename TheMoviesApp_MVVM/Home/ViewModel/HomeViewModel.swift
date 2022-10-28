@@ -16,4 +16,6 @@ class HomeViewModel {
         self.router = router
         self.router?.setSourceView(view)    // bind our view with our router
     }
+    
+    
 }
