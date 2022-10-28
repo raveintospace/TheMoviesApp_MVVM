@@ -10,7 +10,7 @@ import RxSwift
 
 class ManagerConnections {
     
-    func getPopularMovies() -> Observable[] {
+    func getPopularMovies() -> Observable<[Movie]> {
         
     }
     
