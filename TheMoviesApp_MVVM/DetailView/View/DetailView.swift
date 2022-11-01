@@ -20,7 +20,7 @@ class DetailView: UIViewController {
     private var router = DetailRouter()
     private var viewModel = DetailViewModel()
     private var disposeBag = DisposeBag()
-    private var movieID: String?        // to communicate between VC
+    var movieID: String?        // to communicate between VCs, that's why it's not private
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,7 @@ class DetailView: UIViewController {
             self.imageFilm.imageFromServerURL(urlString: Constants.URL.urlImages+movie.posterPath, placeHolderImage: UIImage(named: "claqueta")!)
             self.overviewMovie.text = movie.overview
             self.releaseDate.text = movie.releaseDate
+            self.originalTitle.text = movie.originalTitle
             self.voteAverage.text = String(movie.voteAverage)
         }
     }

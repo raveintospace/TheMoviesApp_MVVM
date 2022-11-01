@@ -131,10 +131,10 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if searchController.isActive && searchController.searchBar.text != "" {
-            
+            viewModel.makeDetailView(movieID: String(self.filteredMovies[indexPath.row].movieID))
         }
         else {
-            
+            viewModel.makeDetailView(movieID: String(self.movies[indexPath.row].movieID))            
         }
     }
 }
