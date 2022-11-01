@@ -128,6 +128,15 @@ extension HomeView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searchController.isActive && searchController.searchBar.text != "" {
+            
+        }
+        else {
+            
+        }
+    }
 }
 
 extension HomeView: UISearchControllerDelegate {        // to cancel the search and reload data when cancel button is clicked
